@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garage Pro - Контакты и информация о компании">
+    <meta property="og:title" content="Контакты - Garage Pro">
+    <meta property="og:description" content="Свяжитесь с нами: +7 (999) 123-45-67, help@garagepro.ru">
+    <title>Контакты - Garage Pro</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo">Garage Pro</a>
+                <nav class="header__nav">
+                    <a href="index.html#catalog">Каталог</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="payment.html">Оплата</a>
+                    <a href="contacts.html" class="active">Контакты</a>
+                </nav>
+                <form class="header__search" role="search">
+                    <img src="icons/Input Search.svg" alt="" aria-hidden="true" width="20" height="20">
+                    <input type="search" placeholder="Введите название запчасти" aria-label="Поиск запчастей">
+                </form>
+                <div class="header__icons">
+                    <button class="icon-btn" aria-label="Профиль">
+                        <img src="icons/material-symbols_person-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="icon-btn" aria-label="Избранное">
+                        <img src="icons/mdi_heart-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="icon-btn" aria-label="Корзина">
+                        <img src="icons/material-symbols_shopping-cart-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="burger-btn" aria-label="Меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="index.html#catalog">Каталог</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="payment.html">Оплата</a>
+                <a href="contacts.html" class="active">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h1 class="page__title">О компании Garage Pro</h1>
+            
+            <div class="about__content">
+                <div class="about__text">
+                    <p>Garage Pro — это надежный поставщик автозапчастей для ВАЗ, иномарок и грузовиков с 2015 года. Мы специализируемся на быстром подборе и доставке качественных запчастей для вашего автомобиля.</p>
+                    <p>Наша команда профессионалов поможет подобрать нужные детали по VIN-номеру, артикулу или фотографии. Мы работаем только с проверенными поставщиками и гарантируем подлинность всех товаров.</p>
+                    <p>За годы работы мы обслужили более 12 000 клиентов и доставили более 50 000 заказов. В нашем каталоге представлено более 300 000 наименований запчастей.</p>
+                </div>
+                
+                <div class="about__stats">
+                    <div class="about__stat-card">
+                        <div class="stat-card__number">2015</div>
+                        <div class="stat-card__label">Год основания</div>
+                    </div>
+                    <div class="about__stat-card">
+                        <div class="stat-card__number">12 000+</div>
+                        <div class="stat-card__label">Довольных клиентов</div>
+                    </div>
+                    <div class="about__stat-card">
+                        <div class="stat-card__number">300 000+</div>
+                        <div class="stat-card__label">Запчастей в каталоге</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="container">
+            <h2 class="section__title">Контактная информация</h2>
+            
+            <div class="contact__grid">
+                <div class="contact__card">
+                    <div class="contact__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 10.999H22C22 5.869 18.127 2 12.99 2V4C17.052 4 20 6.943 20 10.999Z" fill="#FF6B00"/>
+                            <path d="M13 7.99999C15.103 7.99999 16 8.89699 16 11H18C18 7.77499 16.225 5.99999 13 5.99999V7.99999ZM16.422 13.443C16.2298 13.2683 15.9773 13.1752 15.7178 13.1832C15.4583 13.1912 15.212 13.2998 15.031 13.486L12.638 15.947C12.062 15.837 10.904 15.476 9.71198 14.287C8.51998 13.094 8.15898 11.933 8.05198 11.361L10.511 8.96699C10.6975 8.78612 10.8062 8.53982 10.8142 8.2802C10.8222 8.02059 10.7289 7.76804 10.554 7.57599L6.85898 3.51299C6.68402 3.32035 6.44086 3.2035 6.18113 3.18725C5.9214 3.17101 5.66557 3.25665 5.46798 3.42599L3.29798 5.28699C3.12539 5.46051 3.0222 5.69145 3.00798 5.93599C2.99298 6.18599 2.70698 12.108 7.29898 16.702C11.305 20.707 16.323 21 17.705 21C17.907 21 18.031 20.994 18.064 20.992C18.3085 20.9783 18.5393 20.8747 18.712 20.702L20.572 18.53C20.7415 18.3325 20.8273 18.0768 20.8111 17.817C20.7949 17.5573 20.6781 17.3141 20.485 17.139L16.422 13.443Z" fill="#FF6B00"/>
+                        </svg>
+                    </div>
+                    <h3>Телефон</h3>
+                    <p><a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    <p class="contact__note">Ежедневно с 9:00 до 21:00</p>
+                </div>
+
+                <div class="contact__card">
+                    <div class="contact__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#FF6B00"/>
+                        </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:help@garagepro.ru">help@garagepro.ru</a></p>
+                    <p class="contact__note">Ответим в течение часа</p>
+                </div>
+
+                <div class="contact__card">
+                    <div class="contact__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#FF6B00"/>
+                        </svg>
+                    </div>
+                    <h3>Адрес</h3>
+                    <p>г. Москва, ул. Гаражная 15</p>
+                    <p class="contact__note">Самовывоз и офис продаж</p>
+                </div>
+
+                <div class="contact__card">
+                    <div class="contact__icon">
+                        <img src="icons/hugeicons_telegram.svg" alt="" style="width: 32px; height: 32px;">
+                    </div>
+                    <h3>Мессенджеры</h3>
+                    <p><a href="#">Telegram</a> / <a href="#">VK</a></p>
+                    <p class="contact__note">Быстрая связь онлайн</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section__title">Частые вопросы</h2>
+            
+            <div class="faq__list">
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Как быстро вы доставляете запчасти?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Мы доставляем запчасти в день заказа при оформлении до 15:00. Среднее время доставки по Москве — 2-4 часа. В регионы доставка осуществляется транспортными компаниями в течение 2-5 дней.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Как я могу быть уверен в подлинности запчастей?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Мы работаем только с официальными поставщиками и производителями. Все запчасти имеют сертификаты качества и гарантию. При получении вы можете проверить оригинальность по штрих-коду и голограммам.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Можно ли вернуть запчасть, если она не подошла?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Да, вы можете вернуть запчасть в течение 14 дней с момента покупки, если она не была в употреблении и сохранена товарная упаковка. Возврат денег осуществляется в течение 3-5 рабочих дней.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Как подобрать запчасть по VIN-номеру?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Введите VIN-номер вашего автомобиля в поисковую строку на главной странице или позвоните нам. Наши специалисты подберут точные запчасти для вашей модели автомобиля в течение 15 минут.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Какие способы оплаты вы принимаете?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Мы принимаем оплату банковскими картами (Visa, Mastercard, МИР), наличными при получении, а также через онлайн-банкинг. Все платежи защищены и проходят через безопасное соединение.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Предоставляете ли вы гарантию на запчасти?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Да, на все запчасти предоставляется гарантия от производителя. Срок гарантии зависит от типа детали и составляет от 6 месяцев до 2 лет. Гарантийный талон выдается при покупке.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section__title">Как нас найти</h2>
+            
+            <div class="map__wrapper">
+                <div class="map__info">
+                    <h3>Наш офис и склад</h3>
+                    <p><strong>Адрес:</strong> г. Москва, ул. Гаражная 15</p>
+                    <p><strong>Режим работы:</strong></p>
+                    <p>Пн-Пт: 9:00 - 21:00</p>
+                    <p>Сб-Вс: 10:00 - 18:00</p>
+                    <p class="map__note">Самовывоз доступен ежедневно. Рекомендуем предварительно позвонить для уточнения наличия.</p>
+                    <a href="tel:+79991234567" class="btn btn--primary">ПОЗВОНИТЬ</a>
+                </div>
+                
+                <div class="map__container">
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A64d8a6f8c8e8e8e8e8e8e8e8e8e8e8e8&amp;source=constructor" 
+                        width="100%" 
+                        height="400" 
+                        frameborder="0"
+                        style="border-radius: 16px;"
+                        title="Карта расположения Garage Pro">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__col">
+                    <h3>Garage Pro</h3>
+                    <p>Запчасти для ВАЗ, иномарок и грузовиков с доставкой в день заказа</p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Каталог:</h4>
+                    <a href="index.html#catalog">ВАЗ</a>
+                    <a href="index.html#catalog">Иномарки</a>
+                    <a href="index.html#catalog">Грузовики</a>
+                    <a href="index.html#catalog">Масла</a>
+                    <a href="index.html#catalog">Аксессуары</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Клиентам:</h4>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="payment.html">Оплата</a>
+                    <a href="#">Возврат</a>
+                    <a href="contacts.html">О нас</a>
+                    <a href="index.html#blog">Блог</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <p><a href="tel:+79991234567" class="footer__contact">+7 (999) 123-45-67</a></p>
+                    <p>г. Москва, ул. Гаражная 15</p>
+                    <p><a href="mailto:help@garagepro.ru" class="footer__contact">help@garagepro.ru</a></p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Telegram">
+                            <img src="icons/hugeicons_telegram.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="VK">
+                            <img src="icons/meteor-icons_vk.svg" alt="">
+                        </a>
+                    </div>
+                    <p>Принимаем к оплате:</p>
+                    <div class="footer__payment">
+                        <img src="icons/logos_mastercard.svg" alt="Mastercard">
+                        <img src="icons/ri_visa-fill.svg" alt="Visa">
+                        <img src="icons/arcticons_mir-pay.svg" alt="Mir">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>© 2026 Garage Pro · Политика конфиденциальности · Договор оферты</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Доставка автозапчастей в день заказа. Курьером по Москве, транспортными компаниями по России">
+    <meta property="og:title" content="Доставка - Garage Pro">
+    <meta property="og:description" content="Быстрая доставка автозапчастей. Курьером в день заказа, самовывоз, доставка по России">
+    <title>Доставка - Garage Pro</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo">Garage Pro</a>
+                <nav class="header__nav">
+                    <a href="index.html#catalog">Каталог</a>
+                    <a href="delivery.html" class="active">Доставка</a>
+                    <a href="payment.html">Оплата</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+                <form class="header__search" role="search">
+                    <img src="icons/Input Search.svg" alt="" aria-hidden="true" width="20" height="20">
+                    <input type="search" placeholder="Введите название запчасти" aria-label="Поиск запчастей">
+                </form>
+                <div class="header__icons">
+                    <button class="icon-btn" aria-label="Профиль">
+                        <img src="icons/material-symbols_person-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="icon-btn" aria-label="Избранное">
+                        <img src="icons/mdi_heart-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="icon-btn" aria-label="Корзина">
+                        <img src="icons/material-symbols_shopping-cart-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="burger-btn" aria-label="Меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="index.html#catalog">Каталог</a>
+                <a href="delivery.html" class="active">Доставка</a>
+                <a href="payment.html">Оплата</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="delivery-hero">
+        <div class="container">
+            <h1 class="page__title">Доставка запчастей</h1>
+            <p class="delivery-hero__subtitle">Быстро, надежно, удобно — выбирайте способ доставки, который подходит именно вам</p>
+        </div>
+    </section>
+
+    <!-- Delivery Methods -->
+    <section class="delivery-methods">
+        <div class="container">
+            <div class="delivery-methods__grid">
+                <!-- Courier -->
+                <div class="delivery-card">
+                    <div class="delivery-card__icon">
+                        <img src="icons/mdi_truck-outline.svg" alt="" width="48" height="48">
+                    </div>
+                    <h2 class="delivery-card__title">Курьерская доставка</h2>
+                    <p class="delivery-card__desc">Доставим запчасти прямо к вашей двери в удобное время</p>
+                    
+                    <div class="delivery-card__details">
+                        <div class="detail-item">
+                            <span class="detail-label">Срок доставки:</span>
+                            <span class="detail-value">В день заказа</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Стоимость:</span>
+                            <span class="detail-value">От 300 ₽</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Бесплатно:</span>
+                            <span class="detail-value">От 5 000 ₽</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Зона доставки:</span>
+                            <span class="detail-value">В пределах МКАД</span>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery-card__note">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
+                        </svg>
+                        <span>Заказы до 15:00 доставляются в тот же день</span>
+                    </div>
+                </div>
+
+                <!-- Pickup -->
+                <div class="delivery-card delivery-card--highlight">
+                    <div class="delivery-card__badge">Популярно</div>
+                    <div class="delivery-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h2 class="delivery-card__title">Самовывоз</h2>
+                    <p class="delivery-card__desc">Забирайте заказ из нашего магазина без очередей</p>
+                    
+                    <div class="delivery-card__details">
+                        <div class="detail-item">
+                            <span class="detail-label">Срок готовности:</span>
+                            <span class="detail-value">15-30 минут</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Стоимость:</span>
+                            <span class="detail-value highlight">Бесплатно</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Адрес:</span>
+                            <span class="detail-value">ул. Гаражная 15</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Режим работы:</span>
+                            <span class="detail-value">Пн-Вс 9:00-21:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery-card__note">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
+                        </svg>
+                        <span>Позвоните перед приездом для уточнения наличия</span>
+                    </div>
+                </div>
+
+                <!-- Transport Companies -->
+                <div class="delivery-card">
+                    <div class="delivery-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 8H17V4H3C1.9 4 1 4.9 1 6V17H3C3 18.66 4.34 20 6 20C7.66 20 9 18.66 9 17H15C15 18.66 16.34 20 18 20C19.66 20 21 18.66 21 17H23V12L20 8ZM6 18C5.45 18 5 17.55 5 17C5 16.45 5.45 16 6 16C6.55 16 7 16.45 7 17C7 17.55 6.55 18 6 18ZM19 9.5L21.5 12H17V9.5H19ZM18 18C17.45 18 17 17.55 17 17C17 16.45 17.45 16 18 16C18.55 16 19 16.45 19 17C19 17.55 18.55 18 18 18Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h2 class="delivery-card__title">Доставка по России</h2>
+                    <p class="delivery-card__desc">Отправляем запчасти в любой город транспортными компаниями</p>
+                    
+                    <div class="delivery-card__details">
+                        <div class="detail-item">
+                            <span class="detail-label">Срок доставки:</span>
+                            <span class="detail-value">2-7 дней</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Стоимость:</span>
+                            <span class="detail-value">По тарифам ТК</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Компании:</span>
+                            <span class="detail-value">СДЭК, Boxberry</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Трек-номер:</span>
+                            <span class="detail-value">Да</span>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery-card__note">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
+                        </svg>
+                        <span>Отправка в течение 1 рабочего дня после оплаты</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="delivery-process">
+        <div class="container">
+            <h2 class="section__title">Как происходит доставка</h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step__number">1</div>
+                    <h3 class="process-step__title">Оформление заказа</h3>
+                    <p class="process-step__desc">Выберите товары, укажите адрес и способ доставки. Мы свяжемся с вами для подтверждения</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-step__number">2</div>
+                    <h3 class="process-step__title">Сборка и упаковка</h3>
+                    <p class="process-step__desc">Проверяем наличие, комплектуем заказ и надежно упаковываем для безопасной транспортировки</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-step__number">3</div>
+                    <h3 class="process-step__title">Отправка</h3>
+                    <p class="process-step__desc">Передаем заказ курьеру или в транспортную компанию. Вы получите трек-номер для отслеживания</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-step__number">4</div>
+                    <h3 class="process-step__title">Получение</h3>
+                    <p class="process-step__desc">Получите заказ, проверьте комплектность. Оплата при получении или онлайн</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Zones -->
+    <section class="delivery-zones">
+        <div class="container">
+            <h2 class="section__title">Зоны доставки по Москве</h2>
+            
+            <div class="zones-grid">
+                <div class="zone-card">
+                    <h3 class="zone-card__title">В пределах МКАД</h3>
+                    <div class="zone-card__price">300 ₽</div>
+                    <p class="zone-card__time">Доставка в день заказа</p>
+                    <ul class="zone-card__features">
+                        <li>Бесплатно от 5 000 ₽</li>
+                        <li>Доставка до 21:00</li>
+                        <li>Звонок за 30 минут</li>
+                    </ul>
+                </div>
+                
+                <div class="zone-card">
+                    <h3 class="zone-card__title">За МКАД до 10 км</h3>
+                    <div class="zone-card__price">500 ₽</div>
+                    <p class="zone-card__time">Доставка в день заказа</p>
+                    <ul class="zone-card__features">
+                        <li>Бесплатно от 7 000 ₽</li>
+                        <li>Доставка до 20:00</li>
+                        <li>Звонок за 1 час</li>
+                    </ul>
+                </div>
+                
+                <div class="zone-card">
+                    <h3 class="zone-card__title">За МКАД 10-30 км</h3>
+                    <div class="zone-card__price">800 ₽</div>
+                    <p class="zone-card__time">На следующий день</p>
+                    <ul class="zone-card__features">
+                        <li>Бесплатно от 10 000 ₽</li>
+                        <li>Доставка до 19:00</li>
+                        <li>Согласование времени</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="delivery-faq">
+        <div class="container">
+            <h2 class="section__title">Частые вопросы о доставке</h2>
+            
+            <div class="faq__list">
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Можно ли изменить адрес доставки после оформления заказа?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Да, вы можете изменить адрес доставки до момента отправки заказа. Свяжитесь с нами по телефону +7 (999) 123-45-67 или напишите в чат на сайте.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Как я узнаю, что заказ в пути?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>После отправки заказа вы получите SMS с трек-номером для отслеживания. Также курьер позвонит вам за 30 минут до прибытия.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Что делать, если меня не будет дома?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Вы можете указать удобное время доставки при оформлении заказа или договориться с курьером о переносе доставки на другое время.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Можно ли проверить товар при получении?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Да, вы можете проверить комплектность и внешний вид товара при получении. Если обнаружите несоответствие, вы имеете право отказаться от заказа.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question" type="button">
+                        <span>Доставляете ли вы в выходные дни?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Да, мы работаем без выходных. Доставка осуществляется ежедневно с 9:00 до 21:00. Самовывоз также доступен в выходные дни.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="delivery-cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2 class="cta-box__title">Остались вопросы о доставке?</h2>
+                <p class="cta-box__desc">Наши специалисты помогут выбрать оптимальный способ доставки и рассчитают стоимость</p>
+                <div class="cta-box__actions">
+                    <a href="tel:+79991234567" class="btn btn--primary">ПОЗВОНИТЬ</a>
+                    <a href="contacts.html" class="btn btn--secondary">НАПИСАТЬ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__col">
+                    <h3>Garage Pro</h3>
+                    <p>Запчасти для ВАЗ, иномарок и грузовиков с доставкой в день заказа</p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Каталог:</h4>
+                    <a href="index.html#catalog">ВАЗ</a>
+                    <a href="index.html#catalog">Иномарки</a>
+                    <a href="index.html#catalog">Грузовики</a>
+                    <a href="index.html#catalog">Масла</a>
+                    <a href="index.html#catalog">Аксессуары</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Клиентам:</h4>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="payment.html">Оплата</a>
+                    <a href="#">Возврат</a>
+                    <a href="contacts.html">О нас</a>
+                    <a href="index.html#blog">Блог</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <p><a href="tel:+79991234567" class="footer__contact">+7 (999) 123-45-67</a></p>
+                    <p>г. Москва, ул. Гаражная 15</p>
+                    <p><a href="mailto:help@garagepro.ru" class="footer__contact">help@garagepro.ru</a></p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Telegram">
+                            <img src="icons/hugeicons_telegram.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="VK">
+                            <img src="icons/meteor-icons_vk.svg" alt="">
+                        </a>
+                    </div>
+                    <p>Принимаем к оплате:</p>
+                    <div class="footer__payment">
+                        <img src="icons/logos_mastercard.svg" alt="Mastercard">
+                        <img src="icons/ri_visa-fill.svg" alt="Visa">
+                        <img src="icons/arcticons_mir-pay.svg" alt="Mir">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>© 2026 Garage Pro · Политика конфиденциальности · Договор оферты</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

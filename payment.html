@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garage Pro - Оплата заказа">
+    <meta property="og:title" content="Оплата - Garage Pro">
+    <title>Оплата - Garage Pro</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo">Garage Pro</a>
+                <nav class="header__nav">
+                    <a href="index.html#catalog">Каталог</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="payment.html" class="active">Оплата</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+                <form class="header__search" role="search">
+                    <img src="icons/Input Search.svg" alt="" aria-hidden="true" width="20" height="20">
+                    <input type="search" placeholder="Введите название запчасти" aria-label="Поиск запчастей">
+                </form>
+                <div class="header__icons">
+                    <button class="icon-btn" aria-label="Профиль">
+                        <img src="icons/material-symbols_person-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="icon-btn" aria-label="Избранное">
+                        <img src="icons/mdi_heart-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="icon-btn" aria-label="Корзина">
+                        <img src="icons/material-symbols_shopping-cart-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="burger-btn" aria-label="Меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="index.html#catalog">Каталог</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="payment.html" class="active">Оплата</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Payment Section -->
+    <section class="payment-page">
+        <div class="container">
+            <h1 class="page__title">Оплата заказа</h1>
+            
+            <div class="payment__content">
+                <!-- Order Summary -->
+                <div class="payment__summary">
+                    <h2>Ваш заказ</h2>
+                    <div class="summary__items">
+                        <div class="summary__item">
+                            <span>Товары (3 шт.)</span>
+                            <span>4 920 ₽</span>
+                        </div>
+                        <div class="summary__item">
+                            <span>Доставка</span>
+                            <span>Бесплатно</span>
+                        </div>
+                        <div class="summary__divider"></div>
+                        <div class="summary__item summary__total">
+                            <span>Итого:</span>
+                            <span>4 920 ₽</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Form -->
+                <form class="payment__form">
+                    <h2>Контактные данные</h2>
+                    
+                    <div class="form__group">
+                        <label for="name">Имя и фамилия</label>
+                        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+                        </div>
+                    </div>
+
+                    <h2>Адрес доставки</h2>
+
+                    <div class="form__group">
+                        <label for="city">Город</label>
+                        <input type="text" id="city" name="city" placeholder="Москва" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="address">Улица, дом, квартира</label>
+                        <input type="text" id="address" name="address" placeholder="ул. Гаражная, д. 15, кв. 10" required>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="postal">Индекс</label>
+                            <input type="text" id="postal" name="postal" placeholder="123456" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="region">Регион</label>
+                            <input type="text" id="region" name="region" placeholder="Московская область">
+                        </div>
+                    </div>
+
+                    <h2>Способ оплаты</h2>
+
+                    <div class="payment__methods">
+                        <label class="payment__method">
+                            <input type="radio" name="payment" value="card" checked>
+                            <div class="method__content">
+                                <div class="method__icons">
+                                    <img src="icons/logos_mastercard.svg" alt="Mastercard">
+                                    <img src="icons/ri_visa-fill.svg" alt="Visa">
+                                    <img src="icons/arcticons_mir-pay.svg" alt="Mir">
+                                </div>
+                                <span>Банковская карта</span>
+                            </div>
+                        </label>
+
+                        <label class="payment__method">
+                            <input type="radio" name="payment" value="cash">
+                            <div class="method__content">
+                                <span>Наличными при получении</span>
+                            </div>
+                        </label>
+
+                        <label class="payment__method">
+                            <input type="radio" name="payment" value="online">
+                            <div class="method__content">
+                                <span>Онлайн-банкинг</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form__group form__checkbox">
+                        <label>
+                            <input type="checkbox" name="terms" required>
+                            <span>Я согласен с <a href="#">условиями обработки персональных данных</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--large">ОФОРМИТЬ ЗАКАЗ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__col">
+                    <h3>Garage Pro</h3>
+                    <p>Запчасти для ВАЗ, иномарок и грузовиков с доставкой в день заказа</p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Каталог:</h4>
+                    <a href="#">ВАЗ</a>
+                    <a href="#">Иномарки</a>
+                    <a href="#">Грузовики</a>
+                    <a href="#">Масла</a>
+                    <a href="#">Аксессуары</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Клиентам:</h4>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="payment.html">Оплата</a>
+                    <a href="#">Возврат</a>
+                    <a href="contacts.html">О нас</a>
+                    <a href="index.html#blog">Блог</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <p><a href="tel:+79991234567" class="footer__contact">+7 (999) 123-45-67</a></p>
+                    <p>г. Москва, ул. Гаражная 15</p>
+                    <p><a href="mailto:help@garagepro.ru" class="footer__contact">help@garagepro.ru</a></p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Telegram">
+                            <img src="icons/hugeicons_telegram.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="VK">
+                            <img src="icons/meteor-icons_vk.svg" alt="">
+                        </a>
+                    </div>
+                    <p>Принимаем к оплате:</p>
+                    <div class="footer__payment">
+                        <img src="icons/logos_mastercard.svg" alt="Mastercard">
+                        <img src="icons/ri_visa-fill.svg" alt="Visa">
+                        <img src="icons/arcticons_mir-pay.svg" alt="Mir">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>© 2026 Garage Pro · Политика конфиденциальности · Договор оферты</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

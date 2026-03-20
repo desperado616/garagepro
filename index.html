@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garage Pro - Запчасти для ВАЗ, иномарок и грузовиков с доставкой в день заказа">
+    <meta name="keywords" content="запчасти, автозапчасти, ВАЗ, иномарки, грузовики, масло, фильтры">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Garage Pro - Запчасти для ВАЗ, иномарок и грузовиков">
+    <meta property="og:description" content="Найдем по VIN, марке или фото. Доставка в день заказа. 300 000+ запчастей в каталоге">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://garagepro.ru">
+    <meta property="og:image" content="https://garagepro.ru/Images/автозапчасти.jpg">
+    
+    <title>Garage Pro - Запчасти для ВАЗ, иномарок и грузовиков</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo">Garage Pro</a>
+                <nav class="header__nav">
+                    <a href="#catalog" class="active">Каталог</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="payment.html">Оплата</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+                <form class="header__search" role="search">
+                    <img src="icons/Input Search.svg" alt="" aria-hidden="true" width="20" height="20">
+                    <input type="search" placeholder="Введите название запчасти" aria-label="Поиск запчастей">
+                </form>
+                <div class="header__icons">
+                    <button class="icon-btn" aria-label="Профиль">
+                        <img src="icons/material-symbols_person-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="icon-btn" aria-label="Избранное">
+                        <img src="icons/mdi_heart-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="icon-btn" aria-label="Корзина">
+                        <img src="icons/material-symbols_shopping-cart-outline.svg" alt="" width="24" height="24">
+                    </button>
+                    <button class="burger-btn" aria-label="Меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="#catalog" class="active">Каталог</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="payment.html">Оплата</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__left">
+                    <h1 class="hero__title">Запчасти для ВАЗ, иномарок и грузовиков.</h1>
+                    <p class="hero__subtitle">Найдем по VIN, марке или фото. Доставка в день заказа.</p>
+                    
+                    <form class="hero__search" role="search">
+                        <img src="icons/Input Search on zapchast.svg" alt="" aria-hidden="true">
+                        <input type="search" placeholder="Введите VIN или артикул" aria-label="Поиск по VIN или артикулу">
+                        <button class="btn btn--primary" type="submit">НАЙТИ</button>
+                    </form>
+                    
+                    <button class="btn btn--secondary" type="button">ПОДОБРАТЬ ПО АВТО</button>
+                    
+                    <div class="hero__stats">
+                        <div class="hero__stat">
+                            <div class="stat__number">12 000+</div>
+                            <div class="stat__label">Довольных клиентов</div>
+                        </div>
+                        <div class="hero__stat">
+                            <div class="stat__number">50 000+</div>
+                            <div class="stat__label">Заказов доставлено</div>
+                        </div>
+                        <div class="hero__stat">
+                            <div class="stat__number">300 000+</div>
+                            <div class="stat__label">Запчастей в каталоге</div>
+                        </div>
+                        <div class="hero__stat">
+                            <div class="stat__number">&lt; 15 минут</div>
+                            <div class="stat__label">Среднее время подбора</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero__images">
+                    <img src="Images/автозапчасти.jpg" alt="Автозапчасти для различных марок автомобилей" loading="lazy" width="340" height="140">
+                    <img src="Images/автозапчасти1.jpg" alt="Широкий ассортимент запчастей" loading="lazy" width="340" height="140">
+                    <img src="Images/запчасти.jpg" alt="Качественные запчасти в наличии" loading="lazy" width="340" height="140">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="catalog">
+        <div class="container">
+            <h2 class="section__title">Популярные категории</h2>
+            <div class="categories__grid">
+                <a href="#vaz" class="category__item">
+                    <img src="icons/raphael_car.svg" alt="" aria-hidden="true">
+                    <span>ВАЗ</span>
+                </a>
+                <a href="#foreign" class="category__item">
+                    <img src="icons/mdi_car.svg" alt="" aria-hidden="true">
+                    <span>Иномарки</span>
+                </a>
+                <a href="#trucks" class="category__item">
+                    <img src="icons/mdi_truck-outline.svg" alt="" aria-hidden="true">
+                    <span>Грузовики</span>
+                </a>
+                <a href="#oils" class="category__item">
+                    <img src="icons/mingcute_oil-line.svg" alt="" aria-hidden="true">
+                    <span>Масла</span>
+                </a>
+                <a href="#accessories" class="category__item">
+                    <img src="icons/ri_wrench-line.svg" alt="" aria-hidden="true">
+                    <span>Аксессуары</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section__title">Хиты продаж</h2>
+            <div class="products__grid">
+                <!-- Product 1 -->
+                <article class="product__card">
+                    <span class="product__badge" aria-label="Скидка 5 процентов">-5%</span>
+                    <a href="product-filter.html" class="product__card-link">
+                        <img src="Images/МАСЛЯННЫЙ ФИЛЬТР.jpg" alt="Фильтр масляный ВАЗ 2108" loading="lazy" width="280" height="200">
+                        <h3 class="product__name">Фильтр масляный <span class="model-number">ВАЗ-2108</span></h3>
+                        <p class="product__article">Арт: 2108-123456</p>
+                        <p class="product__price">1290 ₽</p>
+                    </a>
+                    <button class="btn btn--primary" type="button" aria-label="Добавить в корзину">В КОРЗИНУ</button>
+                </article>
+                
+                <!-- Product 2 -->
+                <article class="product__card">
+                    <span class="product__badge" aria-label="Скидка 10 процентов">-10%</span>
+                    <a href="product-oil.html" class="product__card-link">
+                        <img src="Images/масло.jpg" alt="Моторное масло Лукойл Люкс 5W-40" loading="lazy" width="280" height="200">
+                        <h3 class="product__name">Моторное масло Лукойл Люкс 5W-40 (4л)</h3>
+                        <p class="product__article">Арт: LK-5W40-4L789</p>
+                        <p class="product__price">450 ₽</p>
+                    </a>
+                    <button class="btn btn--primary" type="button" aria-label="Добавить в корзину">В КОРЗИНУ</button>
+                </article>
+                
+                <!-- Product 3 -->
+                <article class="product__card">
+                    <span class="product__badge" aria-label="Скидка 7 процентов">-7%</span>
+                    <a href="product-pads.html" class="product__card-link">
+                        <img src="Images/колодки.jpg" alt="Тормозные колодки Bosch передние" loading="lazy" width="280" height="200">
+                        <h3 class="product__name">Тормозные колодки Bosch (передние)</h3>
+                        <p class="product__article">Арт: BOS-0987654</p>
+                        <p class="product__price">2340 ₽</p>
+                    </a>
+                    <button class="btn btn--primary" type="button" aria-label="Добавить в корзину">В КОРЗИНУ</button>
+                </article>
+                
+                <!-- Product 4 -->
+                <article class="product__card">
+                    <span class="product__badge" aria-label="Скидка 8 процентов">-8%</span>
+                    <a href="product-air-filter.html" class="product__card-link">
+                        <img src="Images/воздушный фильтр.jpeg" alt="Воздушный фильтр Mann-filter" loading="lazy" width="280" height="200">
+                        <h3 class="product__name">Воздушный фильтр Mann-filter</h3>
+                        <p class="product__article">Арт: MN-C250</p>
+                        <p class="product__price">680 ₽</p>
+                    </a>
+                    <button class="btn btn--primary" type="button" aria-label="Добавить в корзину">В КОРЗИНУ</button>
+                </article>
+                
+                <!-- Product 5 -->
+                <article class="product__card">
+                    <span class="product__badge" aria-label="Скидка 5 процентов">-5%</span>
+                    <a href="product-spark-plugs.html" class="product__card-link">
+                        <img src="Images/свеча.jpg" alt="Свечи зажигания NGK" loading="lazy" width="280" height="200">
+                        <h3 class="product__name">Свечи зажигания NGK</h3>
+                        <p class="product__article">Арт: NGK-BPR6ES445</p>
+                        <p class="product__price">180 ₽/шт</p>
+                    </a>
+                    <button class="btn btn--primary" type="button" aria-label="Добавить в корзину">В КОРЗИНУ</button>
+                </article>
+                
+                <!-- Product 6 -->
+                <article class="product__card">
+                    <span class="product__badge" aria-label="Скидка 10 процентов">-10%</span>
+                    <a href="product-battery.html" class="product__card-link">
+                        <img src="Images/титан.jpg" alt="Аккумулятор Titan 60 Ач" loading="lazy" width="280" height="200">
+                        <h3 class="product__name">Аккумулятор Titan 60 Ач</h3>
+                        <p class="product__article">Арт: TTN-60L78901</p>
+                        <p class="product__price">5490 ₽</p>
+                    </a>
+                    <button class="btn btn--primary" type="button" aria-label="Добавить в корзину">В КОРЗИНУ</button>
+                </article>
+                
+                <!-- Product 7 -->
+                <article class="product__card">
+                    <span class="product__badge" aria-label="Скидка 7 процентов">-7%</span>
+                    <a href="product-belt.html" class="product__card-link">
+                        <img src="Images/ремень.png" alt="Ремень ГРМ Gates" loading="lazy" width="280" height="200">
+                        <h3 class="product__name">Ремень ГРМ Gates</h3>
+                        <p class="product__article">Арт: GTS-KAM532RT</p>
+                        <p class="product__price">3250 ₽</p>
+                    </a>
+                    <button class="btn btn--primary" type="button" aria-label="Добавить в корзину">В КОРЗИНУ</button>
+                </article>
+                
+                <!-- Product 8 -->
+                <article class="product__card">
+                    <span class="product__badge" aria-label="Скидка 5 процентов">-5%</span>
+                    <a href="product-wipers.html" class="product__card-link">
+                        <img src="Images/денсо.jpg" alt="Щётки стеклоочистителя Denso" loading="lazy" width="280" height="200">
+                        <h3 class="product__name">Щётки стеклоочистителя Denso</h3>
+                        <p class="product__article">Арт: DNS-5604SET</p>
+                        <p class="product__price">1120 ₽</p>
+                    </a>
+                    <button class="btn btn--primary" type="button" aria-label="Добавить в корзину">В КОРЗИНУ</button>
+                </article>
+            </div>
+            
+            <button class="btn btn--outline" type="button">СМОТРЕТЬ ВСЕ</button>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="delivery">
+        <div class="container">
+            <h2 class="section__title">Почему выбирают нас?</h2>
+            <div class="features__grid">
+                <div class="feature__item">
+                    <img src="icons/mdi_truck-outline.svg" alt="" aria-hidden="true">
+                    <p>Доставка в день заказа</p>
+                </div>
+                <div class="feature__item">
+                    <img src="icons/carbon_document.svg" alt="" aria-hidden="true">
+                    <p>Гарантия подлинности</p>
+                </div>
+                <div class="feature__item">
+                    <img src="icons/lucide_camera.svg" alt="" aria-hidden="true">
+                    <p>Подбор по ВИН</p>
+                </div>
+                <div class="feature__item">
+                    <img src="icons/Vector.svg" alt="" aria-hidden="true">
+                    <p>Простой возврат</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog">
+        <div class="container">
+            <h2 class="section__title">Полезные статьи</h2>
+            <div class="blog__grid">
+                <article class="blog__card">
+                    <div class="blog__card-image">
+                        <span class="blog__category">Инструкция</span>
+                        <img src="Images/замена масла.jpg" alt="Процесс замены масла в двигателе" loading="lazy">
+                    </div>
+                    <h3>Как поменять масляный фильтр на <span class="model-number">ВАЗ-2108?</span></h3>
+                    <p>Пошаговая инструкция с фото: как самостоятельно заменить фильтр, какие инструменты понадобятся и на что обратить внимание.</p>
+                    <a href="#" class="blog__link">Читать →</a>
+                </article>
+                
+                <article class="blog__card">
+                    <div class="blog__card-image">
+                        <span class="blog__category">Советы</span>
+                        <img src="Images/поломки.jpg" alt="Распространенные поломки автомобиля" loading="lazy">
+                    </div>
+                    <h3>Топ-5 поломок ВАЗ зимой и как их избежать</h3>
+                    <p>Разбираем частые проблемы холодного запуска, печки и аккумулятора. Советы от механиков.</p>
+                    <a href="#" class="blog__link">Читать →</a>
+                </article>
+                
+                <article class="blog__card">
+                    <div class="blog__card-image">
+                        <span class="blog__category">Покупки</span>
+                        <img src="Images/как выбрать масло.jpg" alt="Выбор моторного масла для автомобиля" loading="lazy">
+                    </div>
+                    <h3>Как выбрать моторное масло: простое руководство</h3>
+                    <p>Вязкость, допуски, синтетика или полусинтетика - объясняем без воды. Как выбрать то, что нужно именно твоей машине.</p>
+                    <a href="#" class="blog__link">Читать →</a>
+                </article>
+            </div>
+            
+            <button class="btn btn--outline" type="button">ЧИТАТЬ ВСЕ</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__col">
+                    <h3>Garage Pro</h3>
+                    <p>Запчасти для ВАЗ, иномарок и грузовиков с доставкой в день заказа</p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Каталог:</h4>
+                    <a href="#">ВАЗ</a>
+                    <a href="#">Иномарки</a>
+                    <a href="#">Грузовики</a>
+                    <a href="#">Масла</a>
+                    <a href="#">Аксессуары</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Клиентам:</h4>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="payment.html">Оплата</a>
+                    <a href="#">Возврат</a>
+                    <a href="contacts.html">О нас</a>
+                    <a href="#">Блог</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <p><a href="tel:+79991234567" class="footer__contact">+7 (999) 123-45-67</a></p>
+                    <p>г. Москва, ул. Гаражная 15</p>
+                    <p><a href="mailto:help@garagepro.ru" class="footer__contact">help@garagepro.ru</a></p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Telegram">
+                            <img src="icons/hugeicons_telegram.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="VK">
+                            <img src="icons/meteor-icons_vk.svg" alt="">
+                        </a>
+                    </div>
+                    <p>Принимаем к оплате:</p>
+                    <div class="footer__payment">
+                        <img src="icons/logos_mastercard.svg" alt="Mastercard">
+                        <img src="icons/ri_visa-fill.svg" alt="Visa">
+                        <img src="icons/arcticons_mir-pay.svg" alt="Mir">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>© 2026 Garage Pro · Политика конфиденциальности · Договор оферты</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
