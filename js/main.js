@@ -52,11 +52,15 @@ if (faqButtons.length > 0) {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
             const isActive = faqItem.classList.contains('active');
+            const wasExpanded = button.getAttribute('aria-expanded') === 'true';
             
             // Close all FAQ items
             document.querySelectorAll('.faq__item').forEach(item => {
                 item.classList.remove('active');
-                button.setAttribute('aria-expanded', 'false');
+            });
+            
+            document.querySelectorAll('.faq__question').forEach(btn => {
+                btn.setAttribute('aria-expanded', 'false');
             });
             
             // Open clicked item if it wasn't active
@@ -92,9 +96,10 @@ if (featureToggles.length > 0) {
         button.addEventListener('click', () => {
             const content = button.nextElementSibling;
             const isActive = button.classList.contains('active');
+            const wasExpanded = button.getAttribute('aria-expanded') === 'true';
             
             button.classList.toggle('active');
-            button.setAttribute('aria-expanded', !isActive);
+            button.setAttribute('aria-expanded', !wasExpanded);
             
             if (isActive) {
                 content.style.maxHeight = '0';
@@ -119,8 +124,10 @@ if (paymentForm) {
             if (!field.value.trim()) {
                 isValid = false;
                 field.style.borderColor = 'rgba(239, 68, 68, 0.5)';
+                field.setAttribute('aria-invalid', 'true');
             } else {
                 field.style.borderColor = '';
+                field.setAttribute('aria-invalid', 'false');
             }
         });
         
@@ -146,10 +153,12 @@ addToCartButtons.forEach(button => {
             const originalText = button.textContent;
             button.textContent = '✓ ДОБАВЛЕНО';
             button.style.background = 'var(--success)';
+            button.disabled = true;
             
             setTimeout(() => {
                 button.textContent = originalText;
                 button.style.background = '';
+                button.disabled = false;
             }, 2000);
         });
     }
@@ -163,11 +172,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
                 });
             }
         }
     });
 });
+
+// Lazy loading images fallback for older browsers
+if ('loading' in HTMLImageElement.prototype) {
+    // Browser supports native lazy loading
+    console.log('Native lazy loading supported');
+} else {
+    // Fallback for older browsers
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+}

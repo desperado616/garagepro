@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Garage Pro - Запчасти для ВАЗ, иномарок и грузовиков с доставкой в день заказа">
     <meta name="keywords" content="запчасти, автозапчасти, ВАЗ, иномарки, грузовики, масло, фильтры">
+    <meta name="theme-color" content="#0F1A2E">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Garage Pro - Запчасти для ВАЗ, иномарок и грузовиков">
@@ -15,10 +16,16 @@
     
     <title>Garage Pro - Запчасти для ВАЗ, иномарок и грузовиков</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Critical CSS inline для первого экрана -->
+    <style>:root{--primary:#FF6B00;--bg-primary:#0F1A2E;--text-primary:#F5F5F5}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}.header{background:rgba(22,33,54,.9);padding:16px 0;position:sticky;top:0;z-index:100}</style>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
@@ -101,7 +108,7 @@
                 </div>
                 
                 <div class="hero__images">
-                    <img src="Images/автозапчасти.jpg" alt="Автозапчасти для различных марок автомобилей" loading="lazy" width="340" height="140">
+                    <img src="Images/автозапчасти.jpg" alt="Автозапчасти для различных марок автомобилей" width="340" height="140" loading="eager" fetchpriority="high">
                     <img src="Images/автозапчасти1.jpg" alt="Широкий ассортимент запчастей" loading="lazy" width="340" height="140">
                     <img src="Images/запчасти.jpg" alt="Качественные запчасти в наличии" loading="lazy" width="340" height="140">
                 </div>
@@ -368,6 +375,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
