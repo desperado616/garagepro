@@ -4,13 +4,26 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const body = document.body;
 
 if (burgerBtn && mobileMenu) {
+    // Debounce function for performance
+    const debounce = (func, wait) => {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    };
+
     burgerBtn.addEventListener('click', () => {
         const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
         burgerBtn.setAttribute('aria-expanded', !isExpanded);
         burgerBtn.classList.toggle('active');
         mobileMenu.classList.toggle('active');
         body.style.overflow = isExpanded ? '' : 'hidden';
-    });
+    }, { passive: true });
 
     // Close mobile menu on link click
     document.querySelectorAll('.mobile-nav a').forEach(link => {
@@ -164,7 +177,7 @@ addToCartButtons.forEach(button => {
     }
 });
 
-// Smooth scroll for anchor links
+// Smooth scroll for anchor links with performance optimization
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -176,13 +189,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
+                // Use requestAnimationFrame for smoother scrolling
+                requestAnimationFrame(() => {
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 });
             }
         }
-    });
+    }, { passive: false });
 });
 
 // Lazy loading images fallback for older browsers
@@ -190,18 +206,55 @@ if ('loading' in HTMLImageElement.prototype) {
     // Browser supports native lazy loading
     console.log('Native lazy loading supported');
 } else {
-    // Fallback for older browsers
+    // Fallback for older browsers with performance optimization
     const images = document.querySelectorAll('img[loading="lazy"]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src || img.src;
-                img.classList.add('loaded');
-                observer.unobserve(img);
-            }
-        });
-    });
     
-    images.forEach(img => imageObserver.observe(img));
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    // Use requestAnimationFrame for better performance
+                    requestAnimationFrame(() => {
+                        img.src = img.dataset.src || img.src;
+                        img.classList.add('loaded');
+                    });
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px', // Start loading 50px before entering viewport
+            threshold: 0.01
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for very old browsers
+        images.forEach(img => {
+            img.src = img.dataset.src || img.src;
+        });
+    }
+}
+
+// Performance monitoring (optional, can be removed in production)
+if ('PerformanceObserver' in window) {
+    try {
+        // Monitor Largest Contentful Paint
+        const lcpObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1];
+            console.log('LCP:', lastEntry.renderTime || lastEntry.loadTime);
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // Monitor First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+            list.getEntries().forEach((entry) => {
+                console.log('FID:', entry.processingStart - entry.startTime);
+            });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+    } catch (e) {
+        // Silently fail if performance monitoring is not supported
+    }
 }
